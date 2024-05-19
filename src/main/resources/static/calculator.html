@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css">
+    <script src="./calculator.js" defer></script>
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="innerwrapper">
+        <h1>Grade Calculator</h1>
+        <div id="calculationBox">
+            <h3 class="header1">Activities</h3>
+            <p>Give grades to the numeric activities:</p>
+            <table id="calctable">
+                <thead>
+                    <tr>
+                        <th class = tabledatah1>Name</th>
+                        <th class = tabledatah1>Short Name</th>
+                        <th class = tabledatah1>Weight</th>
+                        <th class = tabledatah1>Grade</th>
+                        <th class = tabledatah1>Percent</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                    <tr id="tablerow1">
+                        <td class = tabledata1>Activity 1</td>
+                        <td class = tabledata1>A1</td>
+                        <td class = tabledata1>
+                            <input class="number" id="weight1" type="number" value="" min="0" />
+                        </td>
+                        <td class = tabledata1>
+                            <input class="number" id="graden1" type="number" value="" min="0" /> /
+                            <input class="number" id="graded1" type="number" value="" min="0" />
+                        </td>
+                        <td class = tabledata1 id="percent1"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="addrow" type="button">ADD ROW</button>
+            <button id="remrow" type="button">REMOVE ROW</button>
+            <h3 class="header1">Result</h3>
+            <p id="result"></p>
+
+
+        <div class="buttondiv">
+            <button class="calcbuttons" type="button" id="weightedbutton">WEIGHTED</button>
+            <button class="calcbuttons" type="button" id="meanbutton">MEAN</button>
+        </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
