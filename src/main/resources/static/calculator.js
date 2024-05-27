@@ -7,19 +7,25 @@ let rowCount = 1;
 addRowButton.addEventListener('click', addRow);
 remRowButton.addEventListener('click', remRow);
 
-meanButton.addEventListener('click', function (event) {
+meanButton.addEventListener('mousedown', function (event) {
     try {
         computeMean();
     } catch (e) {
         document.getElementById('result').innerHTML = e.message;
     }
 });
-weightedButton.addEventListener('click', function (event) {
+meanButton.addEventListener('mouseup', function (event) {
+    meanButton.style.backgroundColor = "darkred";
+});
+weightedButton.addEventListener('mousedown', function (event) {
     try {
         computeWeighted();
     } catch (e) {
         document.getElementById('result').innerHTML = e.message;
     }
+});
+weightedButton.addEventListener('mouseup', function (event) {
+    weightedButton.style.backgroundColor = "darkred";
 });
 
 /**
@@ -90,6 +96,7 @@ function remRow() {
  * Precondition: input is not negative and denominator is not zero
  */
 function computeMean() {
+    meanButton.style.backgroundColor = "red";
     dividesZero();
     negativeValueCheck();
     let sum = 0;
@@ -111,6 +118,7 @@ function computeMean() {
  * Precondition: input is not negative and denominator is not zero
  */
 function computeWeighted() {
+    weightedButton.style.backgroundColor = "red";
     dividesZero();
     negativeValueCheck();
     let sum = 0;
