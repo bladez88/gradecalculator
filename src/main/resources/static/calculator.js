@@ -8,24 +8,38 @@ addRowButton.addEventListener('click', addRow);
 remRowButton.addEventListener('click', remRow);
 
 meanButton.addEventListener('mousedown', function (event) {
+    meanButton.style.backgroundColor = "darkred";
     try {
         computeMean();
     } catch (e) {
         document.getElementById('result').innerHTML = e.message;
     }
 });
-meanButton.addEventListener('mouseup', function (event) {
+meanButton.addEventListener('mouseover', function (event) {
+    meanButton.style.backgroundColor = "pink";
+})
+meanButton.addEventListener('mouseleave', function (event) {
     meanButton.style.backgroundColor = "darkred";
 });
+meanButton.addEventListener('mouseup', function (event) {
+    meanButton.style.backgroundColor = "pink";
+});
 weightedButton.addEventListener('mousedown', function (event) {
+    weightedButton.style.backgroundColor = "darkred";
     try {
         computeWeighted();
     } catch (e) {
         document.getElementById('result').innerHTML = e.message;
     }
 });
-weightedButton.addEventListener('mouseup', function (event) {
+weightedButton.addEventListener('mouseover', function (event) {
+    weightedButton.style.backgroundColor = "pink";
+})
+weightedButton.addEventListener('mouseleave', function (event) {
     weightedButton.style.backgroundColor = "darkred";
+});
+weightedButton.addEventListener('mouseup', function (event) {
+    weightedButton.style.backgroundColor = "pink";
 });
 
 /**
@@ -96,7 +110,6 @@ function remRow() {
  * Precondition: input is not negative and denominator is not zero
  */
 function computeMean() {
-    meanButton.style.backgroundColor = "red";
     dividesZero();
     negativeValueCheck();
     let sum = 0;
@@ -118,7 +131,6 @@ function computeMean() {
  * Precondition: input is not negative and denominator is not zero
  */
 function computeWeighted() {
-    weightedButton.style.backgroundColor = "red";
     dividesZero();
     negativeValueCheck();
     let sum = 0;

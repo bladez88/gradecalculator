@@ -14,6 +14,7 @@ body {
 .innerwrapper {
     background-color: white;
     padding: 5%;
+    overflow: hidden;
 }
 
 #calculationBox {
